@@ -35,7 +35,15 @@ Seq[Any](format.raw/*1.34*/("""
 
 """),_display_(/*4.2*/main("Products Page")/*4.23*/ {_display_(Seq[Any](format.raw/*4.25*/(""" 
   """),format.raw/*5.3*/("""<p class="lead">Product Catalogue</p> 
-  <table class="table table-bordered table-hover table-condensed"> 
+
+    """),format.raw/*7.69*/("""
+    """),_display_(/*8.6*/if(flash.containsKey("success"))/*8.38*/{_display_(Seq[Any](format.raw/*8.39*/("""
+        """),format.raw/*9.9*/("""<div class="alert alert-success">
+            """),_display_(/*10.14*/flash/*10.19*/.get("success")),format.raw/*10.34*/("""
+        """),format.raw/*11.9*/("""</div>
+    """)))}),format.raw/*12.6*/("""
+
+  """),format.raw/*14.3*/("""<table class="table table-bordered table-hover table-condensed"> 
       <thead> 
       <!-- The header row--> 
       <tr> 
@@ -48,18 +56,23 @@ Seq[Any](format.raw/*1.34*/("""
       </thead> 
       <tbody> 
           <!-- Product row(s) --> 
-          """),format.raw/*19.62*/("""
-        """),_display_(/*20.10*/for(p<-products) yield /*20.26*/{_display_(Seq[Any](format.raw/*20.27*/("""
-            """),format.raw/*21.13*/("""<tr> 
-                <td>"""),_display_(/*22.22*/p/*22.23*/.getId),format.raw/*22.29*/("""</td> 
-                <td>"""),_display_(/*23.22*/p/*23.23*/.getName),format.raw/*23.31*/("""</td> 
-                <td>"""),_display_(/*24.22*/p/*24.23*/.getDescription),format.raw/*24.38*/("""</td> 
-                <td>"""),_display_(/*25.22*/p/*25.23*/.getStock),format.raw/*25.32*/("""</td> 
-                <td id="priceAlRight">&euro; """),_display_(/*26.47*/("%.2f".format(p.getPrice))),format.raw/*26.74*/("""</td>
+          """),format.raw/*27.62*/("""
+        """),_display_(/*28.10*/for(p<-products) yield /*28.26*/{_display_(Seq[Any](format.raw/*28.27*/("""
+            """),format.raw/*29.13*/("""<tr> 
+                <td>"""),_display_(/*30.22*/p/*30.23*/.getId),format.raw/*30.29*/("""</td> 
+                <td>"""),_display_(/*31.22*/p/*31.23*/.getName),format.raw/*31.31*/("""</td> 
+                <td>"""),_display_(/*32.22*/p/*32.23*/.getDescription),format.raw/*32.38*/("""</td> 
+                <td>"""),_display_(/*33.22*/p/*33.23*/.getStock),format.raw/*33.32*/("""</td> 
+                <td id="priceAlRight">&euro; """),_display_(/*34.47*/("%.2f".format(p.getPrice))),format.raw/*34.74*/("""</td>
             </tr> 
-        """)))}),format.raw/*28.10*/("""
-      """),format.raw/*29.7*/("""</tbody> 
+        """)))}),format.raw/*36.10*/(""" """),format.raw/*36.32*/("""
+      """),format.raw/*37.7*/("""</tbody> 
   </table> 
+  <p>
+        <a href=""""),_display_(/*40.19*/routes/*40.25*/.HomeController.addProduct()),format.raw/*40.53*/("""">
+            <button class="btn btn-primary">Add a product</button>
+        </a>
+  </p>
   """)))}))
       }
     }
@@ -76,11 +89,11 @@ Seq[Any](format.raw/*1.34*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Dec 02 15:08:00 GMT 2017
+                  DATE: Sat Dec 02 22:19:59 GMT 2017
                   SOURCE: /home/wdd/webapps/playapps/WMDD1Lab8CRUD/app/views/index.scala.html
-                  HASH: ab454939c169aba3bb9442a93c9c325a1596b1fa
-                  MATRIX: 962->1|1089->33|1118->37|1147->58|1186->60|1216->64|1629->500|1666->510|1698->526|1737->527|1778->540|1832->567|1842->568|1869->574|1924->602|1934->603|1963->611|2018->639|2028->640|2064->655|2119->683|2129->684|2159->693|2239->746|2287->773|2352->807|2386->814
-                  LINES: 28->1|33->1|36->4|36->4|36->4|37->5|51->19|52->20|52->20|52->20|53->21|54->22|54->22|54->22|55->23|55->23|55->23|56->24|56->24|56->24|57->25|57->25|57->25|58->26|58->26|60->28|61->29
+                  HASH: d5e89ad98601b7629f654681f96fc57245dafa3a
+                  MATRIX: 962->1|1089->33|1118->37|1147->58|1186->60|1216->64|1287->172|1318->178|1358->210|1396->211|1431->220|1505->267|1519->272|1555->287|1591->296|1633->308|1664->312|2036->707|2073->717|2105->733|2144->734|2185->747|2239->774|2249->775|2276->781|2331->809|2341->810|2370->818|2425->846|2435->847|2471->862|2526->890|2536->891|2566->900|2646->953|2694->980|2759->1014|2788->1036|2822->1043|2895->1089|2910->1095|2959->1123
+                  LINES: 28->1|33->1|36->4|36->4|36->4|37->5|39->7|40->8|40->8|40->8|41->9|42->10|42->10|42->10|43->11|44->12|46->14|59->27|60->28|60->28|60->28|61->29|62->30|62->30|62->30|63->31|63->31|63->31|64->32|64->32|64->32|65->33|65->33|65->33|66->34|66->34|68->36|68->36|69->37|72->40|72->40|72->40
                   -- GENERATED --
               */
           

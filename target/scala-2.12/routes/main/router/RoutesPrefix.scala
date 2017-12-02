@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/playapps/WMDD1Lab8CRUD/conf/routes
-// @DATE:Sat Dec 02 16:06:30 GMT 2017
+// @DATE:Sat Dec 02 22:41:00 GMT 2017
 
 
 package router {

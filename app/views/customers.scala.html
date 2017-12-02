@@ -3,6 +3,13 @@
 
 @main("Customer page") { 
   <p class="lead">Product list</p> 
+
+  @* Display successfil new customer message from flash - if set *@
+  @if(flash.containsKey("success")){
+      <div class="alert alert-success">
+          @flash.get("success")
+      </div>
+  }
   <table class="table table-bordered table-hover table-condensed"> 
       <thead> 
       <!-- The header row--> 
@@ -28,4 +35,10 @@
         }
       </tbody> 
   </table> 
+
+  <p>
+        <a href="@routes.HomeController.addCustomer()">
+            <button class="btn btn-primary">Add a customer</button>
+        </a>
+  </p>
   }

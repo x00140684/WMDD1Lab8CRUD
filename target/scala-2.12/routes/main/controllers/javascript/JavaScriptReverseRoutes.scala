@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/playapps/WMDD1Lab8CRUD/conf/routes
-// @DATE:Sat Dec 02 16:06:30 GMT 2017
+// @DATE:Sat Dec 02 22:41:00 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,12 +20,52 @@ package controllers.javascript {
     }
 
   
+    // @LINE:14
+    def addProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addProductSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addProductSubmit"})
+        }
+      """
+    )
+  
+    // @LINE:17
+    def addCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addCustomer",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addcustomer"})
+        }
+      """
+    )
+  
+    // @LINE:21
+    def addCustomerSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addCustomerSubmit",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addCustomerSubmit"})
+        }
+      """
+    )
+  
     // @LINE:8
     def customers: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.customers",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "customers"})
+        }
+      """
+    )
+  
+    // @LINE:11
+    def addProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addProduct",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addproduct"})
         }
       """
     )
@@ -42,7 +82,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:11
+  // @LINE:24
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -50,7 +90,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:24
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

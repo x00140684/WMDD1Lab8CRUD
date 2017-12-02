@@ -3,6 +3,14 @@
 
 @main("Products Page") { 
   <p class="lead">Product Catalogue</p> 
+
+    @* Display successfil new product message from flash - if set *@
+    @if(flash.containsKey("success")){
+        <div class="alert alert-success">
+            @flash.get("success")
+        </div>
+    }
+
   <table class="table table-bordered table-hover table-condensed"> 
       <thead> 
       <!-- The header row--> 
@@ -25,7 +33,12 @@
                 <td>@p.getStock</td> 
                 <td id="priceAlRight">&euro; @("%.2f".format(p.getPrice))</td>
             </tr> 
-        }
+        } @* End of the loop *@
       </tbody> 
   </table> 
+  <p>
+        <a href="@routes.HomeController.addProduct()">
+            <button class="btn btn-primary">Add a product</button>
+        </a>
+  </p>
   }
