@@ -20,5 +20,11 @@ GET     /addcustomer                 controllers.HomeController.addCustomer
 # Data submitted by the form
 POST     /addCustomerSubmit                 controllers.HomeController.addCustomerSubmit
 
+# Delete a product by an id passed as a parameter
+GET     /delProduct/:id                 controllers.HomeController.deleteProduct(id: Long)
+
+# Delete a customer by an id passed as a parameter
+GET     /delCustomer/:id                 controllers.HomeController.deleteCustomer(id: Long)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

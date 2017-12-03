@@ -115,4 +115,30 @@ public class HomeController extends Controller {
         }
     }
 
+
+    public Result deleteProduct(Long id){
+        
+        // find product by id and call delete method
+        Product.find.ref(id).delete();
+
+        // Add message to flash session
+        flash("success","Product has been deleted");
+
+        // Redirect to index page
+        return redirect(routes.HomeController.index());
+    }
+
+
+    public Result deleteCustomer(Long id){
+        
+        // find customer by id and call delete method
+        Customer.find.ref(id).delete();
+
+        // Add message to flash session
+        flash("success","Customer has been deleted");
+
+        // Redirect to index page
+        return redirect(routes.HomeController.customers());
+    }
+
 }

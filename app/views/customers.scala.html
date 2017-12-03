@@ -30,7 +30,11 @@
                 <td>@p.getFName</td> 
                 <td>@p.getLName</td> 
                 <td>@p.getAddress</td> 
-                 
+                <td>
+                    <a href="@routes.HomeController.deleteCustomer(p.getId)" class="btn-xs btn-danger" onclick="return confirmDel();">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td> 
             </tr> 
         }
       </tbody> 
