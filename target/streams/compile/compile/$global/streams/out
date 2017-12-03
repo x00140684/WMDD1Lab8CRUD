@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/playapps/WMDD1Lab8CRUD/app/controllers/HomeController.java:110:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   method getName()[0m
-[0m[[0m[31merror[0m] [0m[0m  location: variable newCustomer of type models.Customer[0m
-[0m[[0m[31merror[0m] [0m[0m            flash("success", "Customer "+ newCustomer.getName() + " was added");[0m
